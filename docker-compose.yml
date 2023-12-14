@@ -1,0 +1,10 @@
+services:
+  json-server:
+    image: test-jsonserver
+    build:
+      dockerfile: json-server.dockerfile
+      context: .
+    volumes:
+      - "./db.json:/app/db.json"
+    ports:
+      - "3000:3000"
